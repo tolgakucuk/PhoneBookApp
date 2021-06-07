@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9E53CAF68FBDF751DE25832 /* Pods_PhoneBookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */; };
+		FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */; };
+		FD855E73266D716200FC4DEB /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E72266D716200FC4DEB /* Contacts.swift */; };
 		FDC2DD61266B9968002F1FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD60266B9968002F1FA3 /* AppDelegate.swift */; };
 		FDC2DD63266B9968002F1FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD62266B9968002F1FA3 /* SceneDelegate.swift */; };
-		FDC2DD65266B9968002F1FA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD64266B9968002F1FA3 /* ViewController.swift */; };
+		FDC2DD65266B9968002F1FA3 /* SignUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD64266B9968002F1FA3 /* SignUPVC.swift */; };
 		FDC2DD68266B9968002F1FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC2DD66266B9968002F1FA3 /* Main.storyboard */; };
 		FDC2DD6A266B9969002F1FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC2DD69266B9969002F1FA3 /* Assets.xcassets */; };
 		FDC2DD6D266B9969002F1FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC2DD6B266B9969002F1FA3 /* LaunchScreen.storyboard */; };
+		FDC2DD78266BB9E6002F1FA3 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD77266BB9E6002F1FA3 /* UITextField+Ext.swift */; };
+		FDC2DD7C266BCE31002F1FA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDC2DD7B266BCE31002F1FA3 /* GoogleService-Info.plist */; };
+		FDC2DDC2266BFAD2002F1FA3 /* SignINVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DDC1266BFAD2002F1FA3 /* SignINVC.swift */; };
+		FDC2DDDD266C002E002F1FA3 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DDDC266C002E002F1FA3 /* ContactsVC.swift */; };
+		FDC2DDE0266C0042002F1FA3 /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DDDF266C0042002F1FA3 /* NotesVC.swift */; };
+		FDC2DDFC266C1DFC002F1FA3 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DDFB266C1DFC002F1FA3 /* AddContactVC.swift */; };
+		FDC2DE00266C2124002F1FA3 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DDFF266C2124002F1FA3 /* UIImageView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.release.xcconfig"; sourceTree = "<group>"; };
+		9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneBookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
+		FD855E72266D716200FC4DEB /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		FDC2DD5D266B9968002F1FA3 /* PhoneBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC2DD60266B9968002F1FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC2DD62266B9968002F1FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDC2DD64266B9968002F1FA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDC2DD64266B9968002F1FA3 /* SignUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPVC.swift; sourceTree = "<group>"; };
 		FDC2DD67266B9968002F1FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDC2DD69266B9969002F1FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDC2DD6C266B9969002F1FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDC2DD6E266B9969002F1FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC2DD77266BB9E6002F1FA3 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		FDC2DD7B266BCE31002F1FA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDC2DDC1266BFAD2002F1FA3 /* SignINVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignINVC.swift; sourceTree = "<group>"; };
+		FDC2DDDC266C002E002F1FA3 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		FDC2DDDF266C0042002F1FA3 /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		FDC2DDFB266C1DFC002F1FA3 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		FDC2DDFF266C2124002F1FA3 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +53,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E53CAF68FBDF751DE25832 /* Pods_PhoneBookApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C48771CE2478080C3DFCC73B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2718AEA73C055EC00E1AE64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */,
+				11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD855E6D266D43E000FC4DEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD855E71266D715300FC4DEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD855E72266D716200FC4DEB /* Contacts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FDC2DD54266B9968002F1FA3 = {
 			isa = PBXGroup;
 			children = (
 				FDC2DD5F266B9968002F1FA3 /* PhoneBookApp */,
 				FDC2DD5E266B9968002F1FA3 /* Products */,
+				D2718AEA73C055EC00E1AE64 /* Pods */,
+				C48771CE2478080C3DFCC73B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +114,40 @@
 		FDC2DD5F266B9968002F1FA3 /* PhoneBookApp */ = {
 			isa = PBXGroup;
 			children = (
+				FD855E71266D715300FC4DEB /* Model */,
+				FD855E6D266D43E000FC4DEB /* Views */,
+				FDC2DDE3266C005E002F1FA3 /* ViewControllers */,
+				FDC2DD75266BB9AA002F1FA3 /* Extensions */,
 				FDC2DD60266B9968002F1FA3 /* AppDelegate.swift */,
 				FDC2DD62266B9968002F1FA3 /* SceneDelegate.swift */,
-				FDC2DD64266B9968002F1FA3 /* ViewController.swift */,
 				FDC2DD66266B9968002F1FA3 /* Main.storyboard */,
 				FDC2DD69266B9969002F1FA3 /* Assets.xcassets */,
 				FDC2DD6B266B9969002F1FA3 /* LaunchScreen.storyboard */,
 				FDC2DD6E266B9969002F1FA3 /* Info.plist */,
+				FDC2DD7B266BCE31002F1FA3 /* GoogleService-Info.plist */,
 			);
 			path = PhoneBookApp;
+			sourceTree = "<group>";
+		};
+		FDC2DD75266BB9AA002F1FA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC2DD77266BB9E6002F1FA3 /* UITextField+Ext.swift */,
+				FDC2DDFF266C2124002F1FA3 /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC2DDE3266C005E002F1FA3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDC2DD64266B9968002F1FA3 /* SignUPVC.swift */,
+				FDC2DDC1266BFAD2002F1FA3 /* SignINVC.swift */,
+				FDC2DDDC266C002E002F1FA3 /* ContactsVC.swift */,
+				FDC2DDDF266C0042002F1FA3 /* NotesVC.swift */,
+				FDC2DDFB266C1DFC002F1FA3 /* AddContactVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC2DD71266B9969002F1FA3 /* Build configuration list for PBXNativeTarget "PhoneBookApp" */;
 			buildPhases = (
+				3505BD330781769F3897AA97 /* [CP] Check Pods Manifest.lock */,
 				FDC2DD59266B9968002F1FA3 /* Sources */,
 				FDC2DD5A266B9968002F1FA3 /* Frameworks */,
 				FDC2DD5B266B9968002F1FA3 /* Resources */,
+				226D4F32AD263EA86785AE4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC2DD6D266B9969002F1FA3 /* LaunchScreen.storyboard in Resources */,
+				FDC2DD7C266BCE31002F1FA3 /* GoogleService-Info.plist in Resources */,
 				FDC2DD6A266B9969002F1FA3 /* Assets.xcassets in Resources */,
 				FDC2DD68266B9968002F1FA3 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +218,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		226D4F32AD263EA86785AE4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3505BD330781769F3897AA97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhoneBookApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDC2DD59266B9968002F1FA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC2DD65266B9968002F1FA3 /* ViewController.swift in Sources */,
+				FDC2DD65266B9968002F1FA3 /* SignUPVC.swift in Sources */,
 				FDC2DD61266B9968002F1FA3 /* AppDelegate.swift in Sources */,
 				FDC2DD63266B9968002F1FA3 /* SceneDelegate.swift in Sources */,
+				FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */,
+				FDC2DE00266C2124002F1FA3 /* UIImageView+Ext.swift in Sources */,
+				FDC2DDFC266C1DFC002F1FA3 /* AddContactVC.swift in Sources */,
+				FD855E73266D716200FC4DEB /* Contacts.swift in Sources */,
+				FDC2DDC2266BFAD2002F1FA3 /* SignINVC.swift in Sources */,
+				FDC2DD78266BB9E6002F1FA3 /* UITextField+Ext.swift in Sources */,
+				FDC2DDE0266C0042002F1FA3 /* NotesVC.swift in Sources */,
+				FDC2DDDD266C002E002F1FA3 /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +419,7 @@
 		};
 		FDC2DD72266B9969002F1FA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +439,7 @@
 		};
 		FDC2DD73266B9969002F1FA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module Pods_PhoneBookApp {
+  umbrella header "Pods-PhoneBookApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

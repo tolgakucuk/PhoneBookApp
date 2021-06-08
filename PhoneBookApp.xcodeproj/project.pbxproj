@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9E53CAF68FBDF751DE25832 /* Pods_PhoneBookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */; };
+		3BF70CBD4DAFE31E2513059C /* Pods_PhoneBookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */; };
+		FACD1D19266E82B700E41876 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */; };
+		FACD1D1C266EB27900E41876 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD1D1B266EB27900E41876 /* NotesCell.swift */; };
 		FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */; };
 		FD855E73266D716200FC4DEB /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E72266D716200FC4DEB /* Contacts.swift */; };
 		FDC2DD61266B9968002F1FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD60266B9968002F1FA3 /* AppDelegate.swift */; };
@@ -26,9 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.release.xcconfig"; sourceTree = "<group>"; };
-		9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneBookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.debug.xcconfig"; sourceTree = "<group>"; };
+		06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneBookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.release.xcconfig"; sourceTree = "<group>"; };
+		E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		FACD1D1B266EB27900E41876 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
 		FD855E72266D716200FC4DEB /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		FDC2DD5D266B9968002F1FA3 /* PhoneBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,17 +57,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E53CAF68FBDF751DE25832 /* Pods_PhoneBookApp.framework in Frameworks */,
+				3BF70CBD4DAFE31E2513059C /* Pods_PhoneBookApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C48771CE2478080C3DFCC73B /* Frameworks */ = {
+		A7FD742BC906397698025590 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F6802BB20DA7C1ACBC0EA3E /* Pods_PhoneBookApp.framework */,
+				06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,8 +75,8 @@
 		D2718AEA73C055EC00E1AE64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */,
-				11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */,
+				E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */,
+				8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */,
+				FACD1D1B266EB27900E41876 /* NotesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,7 +104,7 @@
 				FDC2DD5F266B9968002F1FA3 /* PhoneBookApp */,
 				FDC2DD5E266B9968002F1FA3 /* Products */,
 				D2718AEA73C055EC00E1AE64 /* Pods */,
-				C48771CE2478080C3DFCC73B /* Frameworks */,
+				A7FD742BC906397698025590 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +137,7 @@
 		FDC2DD75266BB9AA002F1FA3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */,
 				FDC2DD77266BB9E6002F1FA3 /* UITextField+Ext.swift */,
 				FDC2DDFF266C2124002F1FA3 /* UIImageView+Ext.swift */,
 			);
@@ -157,11 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC2DD71266B9969002F1FA3 /* Build configuration list for PBXNativeTarget "PhoneBookApp" */;
 			buildPhases = (
-				3505BD330781769F3897AA97 /* [CP] Check Pods Manifest.lock */,
+				3A5058D4AD691279F33552C6 /* [CP] Check Pods Manifest.lock */,
 				FDC2DD59266B9968002F1FA3 /* Sources */,
 				FDC2DD5A266B9968002F1FA3 /* Frameworks */,
 				FDC2DD5B266B9968002F1FA3 /* Resources */,
-				226D4F32AD263EA86785AE4E /* [CP] Embed Pods Frameworks */,
+				DF2FBE449AF6E8E7B582CE09 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,24 +225,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		226D4F32AD263EA86785AE4E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3505BD330781769F3897AA97 /* [CP] Check Pods Manifest.lock */ = {
+		3A5058D4AD691279F33552C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,6 +247,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DF2FBE449AF6E8E7B582CE09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC2DD65266B9968002F1FA3 /* SignUPVC.swift in Sources */,
+				FACD1D1C266EB27900E41876 /* NotesCell.swift in Sources */,
 				FDC2DD61266B9968002F1FA3 /* AppDelegate.swift in Sources */,
+				FACD1D19266E82B700E41876 /* UIViewController+Ext.swift in Sources */,
 				FDC2DD63266B9968002F1FA3 /* SceneDelegate.swift in Sources */,
 				FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */,
 				FDC2DE00266C2124002F1FA3 /* UIImageView+Ext.swift in Sources */,
@@ -419,13 +427,14 @@
 		};
 		FDC2DD72266B9969002F1FA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECA9EB629B150CFD64B099B4 /* Pods-PhoneBookApp.debug.xcconfig */;
+			baseConfigurationReference = E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CB2FL454D9;
 				INFOPLIST_FILE = PhoneBookApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,13 +448,14 @@
 		};
 		FDC2DD73266B9969002F1FA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11746A84745C82373637A997 /* Pods-PhoneBookApp.release.xcconfig */;
+			baseConfigurationReference = 8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CB2FL454D9;
 				INFOPLIST_FILE = PhoneBookApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,9 +1,4 @@
-//
-//  ContactsViewCell.swift
-//  PhoneBookApp
-//
-//  Created by Tolga on 6.06.2021.
-//
+
 
 import UIKit
 
@@ -15,10 +10,8 @@ class ContactsViewCell: UITableViewCell {
             contactImage.makeRounded()
         }
     }
-    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var contactFullNameLabel: UILabel!
     
-    
-    @IBOutlet weak var contactSirnameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

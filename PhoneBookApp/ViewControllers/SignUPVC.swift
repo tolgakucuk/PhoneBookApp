@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  PhoneBookApp
-//
-//  Created by Tolga on 5.06.2021.
-//
+
 
 import UIKit
 import Firebase
@@ -33,6 +28,8 @@ class SignUPVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        hideKeyboardWhenTappedAround()
        
     }
     

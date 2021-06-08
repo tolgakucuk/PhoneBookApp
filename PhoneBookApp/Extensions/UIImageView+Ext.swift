@@ -1,9 +1,4 @@
-//
-//  UIImageView+Ext.swift
-//  PhoneBookApp
-//
-//  Created by Tolga on 6.06.2021.
-//
+
 
 import Foundation
 import UIKit

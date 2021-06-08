@@ -55,6 +55,7 @@ class SignUPVC: UIViewController {
                     let fireStore = Firestore.firestore()
                     let userDictionary = ["phoneNumber" : self.PhoneNumberText.text!, "e-mail" : self.EmailText.text!] as [String : Any]
                     fireStore.collection("UserInfo").addDocument(data: userDictionary)
+                    self.makeAlert(title: "", message: "Signed succesfully. You can sign in")
                 }
             }
         }

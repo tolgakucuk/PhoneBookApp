@@ -7,7 +7,7 @@ class NotesVC: UIViewController {
     @IBOutlet weak var notesTableView: UITableView!
     
     let fireStoreDatabase = Firestore.firestore()
-    var notesArray: [Contact] = []
+    var notesArray: [Note] = []
     
     var letters: [Character] = []
     
@@ -25,24 +25,33 @@ class NotesVC: UIViewController {
         getNotes()
     }
     
+    //MARK: - Plus Button Clicked
+    @IBAction func plusClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AddNoteVC") as! AddNoteVC
+        vc.isNewNote = true
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    //MARK: - Function to Get Notes Data From Firebase
     func getNotes() {
         
-        fireStoreDatabase.collection("Contacts").addSnapshotListener { (snapshot, err) in
+        fireStoreDatabase.collection("Notes").order(by: "noteTitle").addSnapshotListener { (snapshot, err) in
             if err == nil {
                 if snapshot?.isEmpty == false && snapshot != nil {
                     self.notesArray.removeAll(keepingCapacity: false)
                     for document in snapshot!.documents {
                         if let uid = document.get("uid") as? String {
                             if uid == self.userId {
-                                if let contactName = document.get("contactName") as? String, let _ = document.get("contactBy") as? String, let contactNote = document.get("contactNote") as? String, let contactPhone = document.get("contactPhone") as? String, let contactSirname = document.get("contactSirname") as? String, let imageUrl = document.get("imageUrl") as? String {
-                                    self.notesArray.append(Contact(contactName: contactName, contactSirname: contactSirname, contactUrl: imageUrl, contactNote: contactNote, contactPhone: contactPhone, documentId: document.documentID))
+                                if let noteName = document.get("noteName") as? String, let noteTitle = document.get("noteTitle") as? String {
+                                    self.notesArray.append(Note(noteTitle: noteTitle, noteName: noteName, documentId: document.documentID))
                                 }
                             }
                         }
                     }
                     self.letters.removeAll(keepingCapacity: false)
-                    self.letters = self.notesArray.map({ (contact) in
-                        return contact.contactName.uppercased().first!
+                    self.letters = self.notesArray.map({ (note) in
+                        return note.noteTitle.uppercased().first!
                     })
                     self.letters = self.letters.sorted()
                     self.letters = self.letters.reduce([], { (list, name) -> [Character] in
@@ -66,7 +75,7 @@ class NotesVC: UIViewController {
 
 }
 
-
+//MARK: - Table View Functions
 extension NotesVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,7 +87,7 @@ extension NotesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if letters[indexPath.section] == notesArray[indexPath.row].contactName.uppercased().first {
+        if letters[indexPath.section] == notesArray[indexPath.row].noteTitle.uppercased().first {
             return 100.0
         } else {
             return 0.0
@@ -92,13 +101,21 @@ extension NotesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesCell
         
-        if letters[indexPath.section] == notesArray[indexPath.row].contactName.uppercased().first {
-            cell.notesLabel.text = notesArray[indexPath.row].contactNote
-            cell.nameLabel.text = notesArray[indexPath.row].contactName + " " +  notesArray[indexPath.row].contactSirname
+        if letters[indexPath.section] == notesArray[indexPath.row].noteTitle.uppercased().first {
+            cell.notesLabel.text = notesArray[indexPath.row].noteName
+            cell.nameLabel.text = notesArray[indexPath.row].noteTitle
         }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "AddNoteVC") as! AddNoteVC
+        vc.isNewNote = false
+        vc.documentId = notesArray[indexPath.row].documentId
+        vc.note = notesArray[indexPath.row]
+        self.present(vc, animated: true, completion: nil)
+    }
     
 }

@@ -3,6 +3,8 @@
 import Foundation
 import UIKit
 
+
+//MARK: - Set Icon to left
 extension UITextField {
   func setLeftView(image: UIImage) {
     let iconView = UIImageView(frame: CGRect(x: 15, y: 10, width: 25, height: 25)) 
@@ -13,4 +15,7 @@ extension UITextField {
     leftViewMode = .always
     self.tintColor = .lightGray
   }
+    
+    
+    
 }

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BF70CBD4DAFE31E2513059C /* Pods_PhoneBookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */; };
+		F67100DB2B7F90CE99BFF118 /* Pods_PhoneBookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AB4A0BCD61B2626AB18EF0 /* Pods_PhoneBookApp.framework */; };
 		FACD1D19266E82B700E41876 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */; };
 		FACD1D1C266EB27900E41876 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD1D1B266EB27900E41876 /* NotesCell.swift */; };
+		FD39FE322678AB2E00A16955 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39FE312678AB2E00A16955 /* AddNoteVC.swift */; };
+		FD39FE352678AC8300A16955 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39FE342678AC8300A16955 /* Notes.swift */; };
+		FD701FE72679E9BA00E5D7E2 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701FE62679E9BA00E5D7E2 /* String+Ext.swift */; };
 		FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */; };
 		FD855E73266D716200FC4DEB /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E72266D716200FC4DEB /* Contacts.swift */; };
 		FDC2DD61266B9968002F1FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2DD60266B9968002F1FA3 /* AppDelegate.swift */; };
@@ -28,11 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneBookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.release.xcconfig"; sourceTree = "<group>"; };
-		E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.debug.xcconfig"; sourceTree = "<group>"; };
+		164711F85E7E8C6C87DBAAFC /* Pods-PhoneBookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B7D46675A5270D9AF0CD72E0 /* Pods-PhoneBookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneBookApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneBookApp/Pods-PhoneBookApp.release.xcconfig"; sourceTree = "<group>"; };
+		F2AB4A0BCD61B2626AB18EF0 /* Pods_PhoneBookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneBookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		FACD1D1B266EB27900E41876 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		FD39FE312678AB2E00A16955 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
+		FD39FE342678AC8300A16955 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		FD701FE62679E9BA00E5D7E2 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
 		FD855E72266D716200FC4DEB /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		FDC2DD5D266B9968002F1FA3 /* PhoneBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,17 +63,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF70CBD4DAFE31E2513059C /* Pods_PhoneBookApp.framework in Frameworks */,
+				F67100DB2B7F90CE99BFF118 /* Pods_PhoneBookApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7FD742BC906397698025590 /* Frameworks */ = {
+		C5EC8454E3735A9F02AC9C0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06C86B3BFC547232F07B2850 /* Pods_PhoneBookApp.framework */,
+				F2AB4A0BCD61B2626AB18EF0 /* Pods_PhoneBookApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,8 +81,8 @@
 		D2718AEA73C055EC00E1AE64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */,
-				8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */,
+				164711F85E7E8C6C87DBAAFC /* Pods-PhoneBookApp.debug.xcconfig */,
+				B7D46675A5270D9AF0CD72E0 /* Pods-PhoneBookApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				FD855E72266D716200FC4DEB /* Contacts.swift */,
+				FD39FE342678AC8300A16955 /* Notes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,7 +111,7 @@
 				FDC2DD5F266B9968002F1FA3 /* PhoneBookApp */,
 				FDC2DD5E266B9968002F1FA3 /* Products */,
 				D2718AEA73C055EC00E1AE64 /* Pods */,
-				A7FD742BC906397698025590 /* Frameworks */,
+				C5EC8454E3735A9F02AC9C0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,7 @@
 				FACD1D18266E82B700E41876 /* UIViewController+Ext.swift */,
 				FDC2DD77266BB9E6002F1FA3 /* UITextField+Ext.swift */,
 				FDC2DDFF266C2124002F1FA3 /* UIImageView+Ext.swift */,
+				FD701FE62679E9BA00E5D7E2 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 				FDC2DDDC266C002E002F1FA3 /* ContactsVC.swift */,
 				FDC2DDDF266C0042002F1FA3 /* NotesVC.swift */,
 				FDC2DDFB266C1DFC002F1FA3 /* AddContactVC.swift */,
+				FD39FE312678AB2E00A16955 /* AddNoteVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,11 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC2DD71266B9969002F1FA3 /* Build configuration list for PBXNativeTarget "PhoneBookApp" */;
 			buildPhases = (
-				3A5058D4AD691279F33552C6 /* [CP] Check Pods Manifest.lock */,
+				B9FBDAE3E1B052CEC6009CE7 /* [CP] Check Pods Manifest.lock */,
 				FDC2DD59266B9968002F1FA3 /* Sources */,
 				FDC2DD5A266B9968002F1FA3 /* Frameworks */,
 				FDC2DD5B266B9968002F1FA3 /* Resources */,
-				DF2FBE449AF6E8E7B582CE09 /* [CP] Embed Pods Frameworks */,
+				BC47F1C0612BBB8BCB22CD2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,7 +234,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A5058D4AD691279F33552C6 /* [CP] Check Pods Manifest.lock */ = {
+		B9FBDAE3E1B052CEC6009CE7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,7 +256,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF2FBE449AF6E8E7B582CE09 /* [CP] Embed Pods Frameworks */ = {
+		BC47F1C0612BBB8BCB22CD2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,12 +286,15 @@
 				FACD1D19266E82B700E41876 /* UIViewController+Ext.swift in Sources */,
 				FDC2DD63266B9968002F1FA3 /* SceneDelegate.swift in Sources */,
 				FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */,
+				FD39FE322678AB2E00A16955 /* AddNoteVC.swift in Sources */,
 				FDC2DE00266C2124002F1FA3 /* UIImageView+Ext.swift in Sources */,
 				FDC2DDFC266C1DFC002F1FA3 /* AddContactVC.swift in Sources */,
 				FD855E73266D716200FC4DEB /* Contacts.swift in Sources */,
 				FDC2DDC2266BFAD2002F1FA3 /* SignINVC.swift in Sources */,
+				FD39FE352678AC8300A16955 /* Notes.swift in Sources */,
 				FDC2DD78266BB9E6002F1FA3 /* UITextField+Ext.swift in Sources */,
 				FDC2DDE0266C0042002F1FA3 /* NotesVC.swift in Sources */,
+				FD701FE72679E9BA00E5D7E2 /* String+Ext.swift in Sources */,
 				FDC2DDDD266C002E002F1FA3 /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +439,7 @@
 		};
 		FDC2DD72266B9969002F1FA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E60989A03846511F23D27AC8 /* Pods-PhoneBookApp.debug.xcconfig */;
+			baseConfigurationReference = 164711F85E7E8C6C87DBAAFC /* Pods-PhoneBookApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,7 +460,7 @@
 		};
 		FDC2DD73266B9969002F1FA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8221FAE00A5DDB56A92FED4E /* Pods-PhoneBookApp.release.xcconfig */;
+			baseConfigurationReference = B7D46675A5270D9AF0CD72E0 /* Pods-PhoneBookApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

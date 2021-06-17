@@ -7,11 +7,14 @@ import SDWebImage
 class ContactsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let fireStoreDatabase = Firestore.firestore()
     var contactArray = [Contact]()
+    var tempContactArray = [Contact]()
     
     var letters: [Character] = []
+    var tempLetters: [Character] = []
     
     let user = Auth.auth().currentUser
     lazy var userId:String = {
@@ -23,9 +26,12 @@ class ContactsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        searchBar.delegate = self
+        
         getDataFromFirebase()
     }
     
+    //MARK: - Alert
     func makeAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
@@ -33,6 +39,7 @@ class ContactsVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK: - Function to Get Contacts Data From Firebase
     func getDataFromFirebase(){
         fireStoreDatabase.collection("Contacts").order(by: "contactName").addSnapshotListener { (snapshot, err) in
             if err == nil {
@@ -41,12 +48,22 @@ class ContactsVC: UIViewController {
                     for document in snapshot!.documents {
                         if let uid = document.get("uid") as? String {
                             if uid == self.userId {
-                                if let contactName = document.get("contactName") as? String, let _ = document.get("contactBy") as? String, let contactNote = document.get("contactNote") as? String, let contactPhone = document.get("contactPhone") as? String, let contactSirname = document.get("contactSirname") as? String, let imageUrl = document.get("imageUrl") as? String {
-                                    self.contactArray.append(Contact(contactName: contactName, contactSirname: contactSirname, contactUrl: imageUrl, contactNote: contactNote, contactPhone: contactPhone, documentId: document.documentID))
+                                if let contactUrl = document.get("contactUrl") as? String,
+                                   let contactName = document.get("contactName") as? String,
+                                   let contactSirname = document.get("contactSirname") as? String,
+                                   let contactPhone = document.get("contactPhone") as? String,
+                                   let contactEmail = document.get("contactEmail") as? String,
+                                   let contactBloodgroup = document.get("contactBloodGroup") as? String,
+                                   let contactBirthday = document.get("contactBirthday") as? String{
+                                    
+                                    self.contactArray.append(Contact(contactUrl: contactUrl, contactName: contactName, contactSirname: contactSirname, contactPhone: contactPhone, contactEmail: contactEmail, contactBloodgroup: contactBloodgroup, contactBirthday: contactBirthday, documentId: document.documentID))
                                 }
+                                
                             }
                         }
                     }
+                    self.tempContactArray = self.contactArray
+                    
                     //Section işlemi için
                     self.letters.removeAll(keepingCapacity: false)
                     self.letters = self.contactArray.map({ (contact) in
@@ -59,7 +76,9 @@ class ContactsVC: UIViewController {
                         }
                         return list
                     })
+                    self.tempLetters = self.letters
                     self.tableView.reloadData()
+                    
                 } else {
                     self.contactArray.removeAll(keepingCapacity: false)
                     self.tableView.reloadData()
@@ -68,15 +87,31 @@ class ContactsVC: UIViewController {
         }
     }
     
+    func getLetters(contact: [Contact]) {
+        //Section işlemi için
+        letters.removeAll(keepingCapacity: false)
+        letters = contact.map({ (contact) in
+            return contact.contactName.uppercased().first!
+        })
+        letters = letters.sorted()
+        letters = letters.reduce([], { (list, name) -> [Character] in
+            if !list.contains(name) {
+                return list + [name]
+            }
+            return list
+        })
+    }
+    
     @IBAction func addClicked(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddContactVC") as! AddContactVC
         vc.isNewContact = true
         self.present(vc, animated: true, completion: nil)
     }
-  
+    
 }
 
+//MARK: - Table View Functions
 extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,9 +122,8 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         return letters[section].description
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        
         return contactArray.count
     }
     
@@ -119,5 +153,33 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         vc.documentId = contactArray[indexPath.row].documentId
         vc.contact = contactArray[indexPath.row]
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+}
+
+//MARK: - Search Bar
+extension ContactsVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        
+        letters.removeAll(keepingCapacity: false)
+        
+        
+        if searchText.isEmpty == false {
+            contactArray = contactArray.filter{$0.contactName.lowercased().contains(searchText.lowercased())}
+            for i in contactArray {
+                print(i.contactName)
+            }
+            getLetters(contact: contactArray)
+        } else {
+            contactArray = tempContactArray
+            letters = tempLetters
+        }
+        
+        self.tableView.reloadData()
+        
     }
 }

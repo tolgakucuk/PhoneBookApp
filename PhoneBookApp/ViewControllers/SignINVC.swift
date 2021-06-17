@@ -22,7 +22,7 @@ class SignINVC: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
-
+    //MARK: - Sign In Clicked
     @IBAction func SignInClicked(_ sender: Any) {
         if(emailText.text == ""){
             makeAlert(title: "Error", message: "Please enter an email")
@@ -41,11 +41,12 @@ class SignINVC: UIViewController {
     }
     
     
-    
+    //MARK: - Sign Up
     @IBAction func SignUpClicked(_ sender: Any) {
         performSegue(withIdentifier: "toSignUp", sender: nil)
     }
     
+    //MARK: - Alert
     func makeAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)

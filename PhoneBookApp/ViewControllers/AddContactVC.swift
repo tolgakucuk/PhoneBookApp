@@ -31,6 +31,8 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     var datePicker = UIDatePicker()
     
+    var indicatorView:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -80,6 +82,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     //MARK: - Save Button Clicked
     @IBAction func saveClicked(_ sender: Any) {
+        self.startIndicator()
         let storage = Storage.storage()
         let storageReference = storage.reference()
         
@@ -100,9 +103,12 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                             let imageUrl = url?.absoluteString
                             
                             //Firebase İşlemleri
+                            
                             if(nameText.text == "" || phoneNumberText.text == ""){
+                                self.stopIndicator()
                                 makeAlert(title: "ERROR", message: "You should enter at least firstname and phone to create contact.")
                             }else{
+                
                                 let fireStoreDatabase = Firestore.firestore()
                                 
                                 let fireStoreContacts = ["contactUrl" : imageUrl ?? "",
@@ -115,19 +121,25 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                                                          "uid": userId] as [String : Any]
                                 if self.isNewContact {
                                     //add new person
+                                    
                                     fireStoreDatabase.collection("Contacts").document().setData(fireStoreContacts) { (err) in
                                         if(err != nil){
+                                            self.stopIndicator()
                                             self.makeAlert(title: "Error", message: err?.localizedDescription ?? "Error")
                                         }else{
+                                            self.stopIndicator()
                                             self.makeAlertForSegue(title: "", message: "You have added the contact succesfuly.")
                                         }
                                     }
                                 } else {
                                     //update person
+                            
                                     fireStoreDatabase.collection("Contacts").document(self.documentId).setData(fireStoreContacts) { (err) in
                                         if(err != nil){
+                                            self.stopIndicator()
                                             self.makeAlert(title: "Error", message: err?.localizedDescription ?? "Error")
                                         }else{
+                                            self.stopIndicator()
                                             self.makeAlertForSegue(title: "", message: "You have updated the contact succesfuly.")
                                         }
                                     }
@@ -168,10 +180,13 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func deleteButtonClicked(_ sender: Any) {
         //delete user
         let fireStoreDatabase = Firestore.firestore()
+        self.startIndicator()
         fireStoreDatabase.collection("Contacts").document(self.documentId).delete { (err) in
             if err == nil {
+                self.stopIndicator()
                 self.makeAlertForSegue(title: "", message: "You have deleted the contact succesfuly.")
             } else {
+                self.stopIndicator()
                 self.makeAlert(title: "Error", message: "Deleting error")
             }
         }
@@ -263,5 +278,18 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
         
         return number
+    }
+    
+    //MARK: - Indicator
+    func startIndicator(){
+        indicatorView.center = self.view.center
+        indicatorView.hidesWhenStopped = true
+        view.addSubview(indicatorView)
+        
+        indicatorView.startAnimating()
+    }
+    
+    func stopIndicator(){
+        indicatorView.stopAnimating()
     }
 }

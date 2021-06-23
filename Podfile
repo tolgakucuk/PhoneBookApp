@@ -11,6 +11,7 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'SDWebImage'
+pod 'IQKeyboardManagerSwift', '6.3.0'
   # Pods for PhoneBookApp
 
 end

@@ -27,10 +27,12 @@ class SignUPVC: UIViewController, UITextFieldDelegate {
             ConfirmPasswordText.setLeftView(image: UIImage.init(named: "password")!)
         }
     }
+    
+    var indicatorView:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         PhoneNumberText.delegate = self
         hideKeyboardWhenTappedAround()
        
@@ -38,32 +40,40 @@ class SignUPVC: UIViewController, UITextFieldDelegate {
     
     //MARK: - Sign Up Clicked
     @IBAction func SignUpClicked(_ sender: Any) {
+        self.startIndicator()
         if(PhoneNumberText.text!.count <= 14){
+            self.stopIndicator()
             makeAlert(title: "Error", message: "Please enter a 11 character phone number")
         }
         else if(EmailText.text == ""){
+            self.stopIndicator()
             makeAlert(title: "Error", message: "Please enter an email")
         }
         else if(PasswordText.text == ""){
+            self.stopIndicator()
             makeAlert(title: "Error", message: "Please enter your password")
         }
         else if(ConfirmPasswordText.text != PasswordText.text){
+            self.stopIndicator()
             makeAlert(title: "Error", message: "Please confirm your password")
         }
         else{
+            
             Auth.auth().createUser(withEmail: EmailText.text!, password: PasswordText.text!) { (auth, error) in
                 if(error != nil){
+                    self.stopIndicator()
                     self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
                 }else{
                     let fireStore = Firestore.firestore()
                     let userDictionary = ["phoneNumber" : self.PhoneNumberText.text!, "e-mail" : self.EmailText.text!] as [String : Any]
                     fireStore.collection("UserInfo").addDocument(data: userDictionary)
+                    self.stopIndicator()
                     self.makeAlertForSegue(title: "", message: "You have signed in succesfuly. You can sign in")
-                    
                 }
             }
         }
-       
+        
+        
     }
     
     //MARK: - Sign In Clicked
@@ -130,5 +140,16 @@ class SignUPVC: UIViewController, UITextFieldDelegate {
         return number
     }
     
+    func startIndicator(){
+        indicatorView.center = self.view.center
+        indicatorView.hidesWhenStopped = true
+        view.addSubview(indicatorView)
+        
+        indicatorView.startAnimating()
+    }
+    
+    func stopIndicator(){
+        indicatorView.stopAnimating()
+    }
 }
 

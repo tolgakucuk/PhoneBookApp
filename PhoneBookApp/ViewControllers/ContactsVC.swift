@@ -9,6 +9,10 @@ class ContactsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var hiddenView: UIView!
+    
+    
+    @IBOutlet weak var emptyView: UIView!
     let fireStoreDatabase = Firestore.firestore()
     var contactArray = [Contact]()
     var tempContactArray = [Contact]()
@@ -21,13 +25,15 @@ class ContactsVC: UIViewController {
         return self.user!.uid
     }()
     
+    var indicatorView:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
         searchBar.delegate = self
-        
+        hideKeyboardWhenTappedAround()
         getDataFromFirebase()
     }
     
@@ -83,6 +89,14 @@ class ContactsVC: UIViewController {
                     self.contactArray.removeAll(keepingCapacity: false)
                     self.tableView.reloadData()
                 }
+                
+                if(self.contactArray.count == 0) {
+                    self.emptyView.isHidden = false
+                    self.tableView.isHidden = true
+                }else{
+                    self.emptyView.isHidden = true
+                    self.tableView.isHidden = false
+                }
             }
         }
     }
@@ -109,7 +123,32 @@ class ContactsVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+        
+    
+    @IBAction func logoutClicked(_ sender: Any) {
+        do {
+            self.startIndicator()
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "toSignIn", sender: nil)
+        } catch  {
+            makeAlert(title: "Error", message: "Logout error!")
+        }
+    }
+    
+    func startIndicator(){
+        indicatorView.center = self.view.center
+        indicatorView.hidesWhenStopped = true
+        view.addSubview(indicatorView)
+        
+        indicatorView.startAnimating()
+    }
+    
+    func stopIndicator(){
+        indicatorView.stopAnimating()
+    }
 }
+
+
 
 //MARK: - Table View Functions
 extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
@@ -158,6 +197,10 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
 }
 
 //MARK: - Search Bar
@@ -182,4 +225,13 @@ extension ContactsVC: UISearchBarDelegate {
         self.tableView.reloadData()
         
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
 }

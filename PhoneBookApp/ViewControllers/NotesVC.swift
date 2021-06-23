@@ -6,6 +6,8 @@ class NotesVC: UIViewController {
 
     @IBOutlet weak var notesTableView: UITableView!
     
+    @IBOutlet weak var emptyView: UIView!
+    
     let fireStoreDatabase = Firestore.firestore()
     var notesArray: [Note] = []
     
@@ -65,6 +67,14 @@ class NotesVC: UIViewController {
                     //herhangi bir veri kalmayınca (tüm verileri silerken en son kalan veriyide silmek için)
                     self.notesArray.removeAll(keepingCapacity: false)
                     self.notesTableView.reloadData()
+                }
+                
+                if(self.notesArray.count == 0 ){
+                    self.emptyView.isHidden = false
+                    self.notesTableView.isHidden = true
+                }else{
+                    self.emptyView.isHidden = true
+                    self.notesTableView.isHidden = false
                 }
             }
         }

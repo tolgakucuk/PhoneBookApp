@@ -599,26 +599,6 @@ Click "+" button to add note. </string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-Jn-Ymh">
-                                <rect key="frame" x="0.0" y="173" width="414" height="689"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not have any contact. Click top right button to add contact." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-oN-Bdd">
-                                        <rect key="frame" x="32" y="269.5" width="350" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="350" id="CKK-eE-bJD"/>
-                                            <constraint firstAttribute="height" constant="150" id="pSH-Fe-NDe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="Ap1-oN-Bdd" firstAttribute="centerY" secondItem="7y1-Jn-Ymh" secondAttribute="centerY" id="3C8-xE-H8i"/>
-                                    <constraint firstItem="Ap1-oN-Bdd" firstAttribute="centerX" secondItem="7y1-Jn-Ymh" secondAttribute="centerX" id="DYm-dm-9wB"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-zB-a79">
                                 <rect key="frame" x="20" y="64" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -721,8 +701,6 @@ new contact. </string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="wrO-fN-rNn" secondAttribute="trailing" id="G2b-jE-Ik3"/>
-                            <constraint firstItem="p6Y-0G-d7a" firstAttribute="bottom" secondItem="7y1-Jn-Ymh" secondAttribute="bottom" id="G45-ce-SQp"/>
-                            <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="7y1-Jn-Ymh" secondAttribute="trailing" id="HQa-Uz-SHh"/>
                             <constraint firstItem="9ys-zB-a79" firstAttribute="top" secondItem="p6Y-0G-d7a" secondAttribute="top" constant="20" id="Nf0-4R-J6w"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="top" secondItem="WeL-yY-tXm" secondAttribute="bottom" id="Scp-Aw-ULw"/>
                             <constraint firstItem="wrO-fN-rNn" firstAttribute="leading" secondItem="p6Y-0G-d7a" secondAttribute="leading" id="UOw-pt-i8W"/>
@@ -733,8 +711,6 @@ new contact. </string>
                             <constraint firstItem="wrO-fN-rNn" firstAttribute="top" secondItem="WeL-yY-tXm" secondAttribute="bottom" id="ftw-Io-OX1"/>
                             <constraint firstItem="WeL-yY-tXm" firstAttribute="trailing" secondItem="p6Y-0G-d7a" secondAttribute="trailing" id="gBi-sp-Qxe"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="leading" secondItem="p6Y-0G-d7a" secondAttribute="leading" id="hbI-cz-fJc"/>
-                            <constraint firstItem="7y1-Jn-Ymh" firstAttribute="top" secondItem="WeL-yY-tXm" secondAttribute="bottom" id="ik7-RQ-ZL2"/>
-                            <constraint firstItem="7y1-Jn-Ymh" firstAttribute="leading" secondItem="p6Y-0G-d7a" secondAttribute="leading" id="nW9-5U-e5D"/>
                             <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="vN0-nV-yN0" secondAttribute="trailing" constant="20" id="oPE-1e-VpR"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="trailing" secondItem="p6Y-0G-d7a" secondAttribute="trailing" id="pKp-ck-6rb"/>
                             <constraint firstItem="WeL-yY-tXm" firstAttribute="top" secondItem="vN0-nV-yN0" secondAttribute="bottom" constant="10" id="qDM-dw-Roo"/>
@@ -744,7 +720,6 @@ new contact. </string>
                     <tabBarItem key="tabBarItem" title="Contacts" image="c.circle.fill" catalog="system" id="8Tb-4Q-WtE"/>
                     <connections>
                         <outlet property="emptyView" destination="wrO-fN-rNn" id="tqm-u5-HbR"/>
-                        <outlet property="hiddenView" destination="7y1-Jn-Ymh" id="uvG-jz-yBh"/>
                         <outlet property="searchBar" destination="WeL-yY-tXm" id="or4-kA-8Ql"/>
                         <outlet property="tableView" destination="3cj-2L-ivm" id="mbV-by-sj0"/>
                         <segue destination="bll-5k-gne" kind="presentation" identifier="toSignIn" modalPresentationStyle="fullScreen" id="7dU-Vp-u7H"/>
@@ -929,7 +904,7 @@ new contact. </string>
     <inferredMetricsTieBreakers>
         <segue reference="T8f-Ko-FR6"/>
         <segue reference="h9I-zc-2Yd"/>
-        <segue reference="7dU-Vp-u7H"/>
+        <segue reference="tXG-TC-YQd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add2" width="800" height="566"/>

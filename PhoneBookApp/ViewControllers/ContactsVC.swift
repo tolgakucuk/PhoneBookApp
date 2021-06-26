@@ -8,11 +8,9 @@ class ContactsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var hiddenView: UIView!
-    
-    
     @IBOutlet weak var emptyView: UIView!
+    
+    
     let fireStoreDatabase = Firestore.firestore()
     var contactArray = [Contact]()
     var tempContactArray = [Contact]()
@@ -70,7 +68,7 @@ class ContactsVC: UIViewController {
                     }
                     self.tempContactArray = self.contactArray
                     
-                    //Section işlemi için
+                    //Section
                     self.letters.removeAll(keepingCapacity: false)
                     self.letters = self.contactArray.map({ (contact) in
                         return contact.contactName.uppercased().first!
@@ -163,21 +161,21 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return contactArray.count
+        return tempContactArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ContactsViewCell
         
-        if letters[indexPath.section] == contactArray[indexPath.row].contactName.uppercased().first {
-            cell.contactImage.sd_setImage(with: URL(string: contactArray[indexPath.row].contactUrl))
-            cell.contactFullNameLabel.text = contactArray[indexPath.row].contactName + " " + contactArray[indexPath.row].contactSirname
+        if letters[indexPath.section] == tempContactArray[indexPath.row].contactName.uppercased().first {
+            cell.contactImage.sd_setImage(with: URL(string: tempContactArray[indexPath.row].contactUrl))
+            cell.contactFullNameLabel.text = tempContactArray[indexPath.row].contactName + " " + contactArray[indexPath.row].contactSirname
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if letters[indexPath.section] == contactArray[indexPath.row].contactName.uppercased().first {
+        if letters[indexPath.section] == tempContactArray[indexPath.row].contactName.uppercased().first {
             return 100.0
         } else {
             return 0.0
@@ -189,8 +187,8 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "AddContactVC") as! AddContactVC
         vc.isNewContact = false
-        vc.documentId = contactArray[indexPath.row].documentId
-        vc.contact = contactArray[indexPath.row]
+        vc.documentId = tempContactArray[indexPath.row].documentId
+        vc.contact = tempContactArray[indexPath.row]
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -207,18 +205,12 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
 extension ContactsVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        
         letters.removeAll(keepingCapacity: false)
-        
-        
         if searchText.isEmpty == false {
-            contactArray = contactArray.filter{$0.contactName.lowercased().contains(searchText.lowercased())}
-            for i in contactArray {
-                print(i.contactName)
-            }
-            getLetters(contact: contactArray)
+            tempContactArray = contactArray.filter{$0.contactName.lowercased().contains(searchText.lowercased())}
+            getLetters(contact: tempContactArray)
         } else {
-            contactArray = tempContactArray
+            tempContactArray = contactArray
             letters = tempLetters
         }
         
@@ -232,6 +224,7 @@ extension ContactsVC: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
+        self.tableView.reloadData()
     }
     
 }

@@ -22,8 +22,31 @@ class SignINVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        
+        if self.traitCollection.userInterfaceStyle == .dark {
+            emailText.layer.borderColor = UIColor.white.cgColor
+            passwordText.layer.borderColor = UIColor.white.cgColor
+        }
+        else{
+            emailText.layer.borderColor = UIColor.black.cgColor
+            passwordText.layer.borderColor = UIColor.black.cgColor
+        }
+        
     }
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if self.traitCollection.userInterfaceStyle == .dark {
+            emailText.layer.borderColor = UIColor.white.cgColor
+            passwordText.layer.borderColor = UIColor.white.cgColor
+        }
+        else{
+            emailText.layer.borderColor = UIColor.black.cgColor
+            passwordText.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    
     
     //MARK: - Sign In Clicked
     @IBAction func SignInClicked(_ sender: Any) {

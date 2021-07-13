@@ -33,6 +33,7 @@ class ContactsVC: UIViewController {
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
         getDataFromFirebase()
+        
     }
     
     //MARK: - Alert

@@ -34,7 +34,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
         hideKeyboardWhenTappedAround()
         deleteButton.layer.cornerRadius = 10
         txtNote.delegate = self
-        txtNote.text = "Enter your note here"
+        txtNote.text = "ENTER_YOUR_NOTE_HERE".localized
         txtNote.textColor = UIColor.lightGray
         txtNote!.layer.borderWidth = 1
         txtNote!.layer.borderColor = UIColor.black.cgColor
@@ -52,6 +52,8 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
                 txtNote.text = note!.noteName
             }
         }
+        
+        
     }
     
     //MARK: - Save Button Clicked
@@ -132,7 +134,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
     
     //MARK: - TextView
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if txtNote.text == "Enter your note here" { 
+        if txtNote.text == "ENTER_YOUR_NOTE_HERE".localized {
             txtNote.text = ""
             txtNote.textColor = UIColor.black
         }
@@ -141,7 +143,7 @@ class AddNoteVC: UIViewController, UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if txtNote.text == "" {
-            txtNote.text = "Enter your note here"
+            txtNote.text = "ENTER_YOUR_NOTE_HERE".localized
             txtNote.textColor = UIColor.lightGray
         }
         textView.resignFirstResponder()

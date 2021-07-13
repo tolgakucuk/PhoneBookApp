@@ -1,0 +1,108 @@
+
+/* Class = "UITextField"; placeholder = "Firstname*"; ObjectID = "1tq-Lx-KWg"; */
+"1tq-Lx-KWg.placeholder" = "Firstname*";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "33r-fV-qFJ"; */
+"33r-fV-qFJ.text" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "5mJ-QA-Qn9"; */
+"5mJ-QA-Qn9.normalTitle" = "Sign Up";
+
+/* Class = "UITabBarItem"; title = "Contacts"; ObjectID = "8Tb-4Q-WtE"; */
+"8Tb-4Q-WtE.title" = "Contacts";
+
+/* Class = "UILabel"; text = "title"; ObjectID = "8go-gG-NvY"; */
+"8go-gG-NvY.text" = "title";
+
+/* Class = "UILabel"; text = "Contacts"; ObjectID = "9ys-zB-a79"; */
+"9ys-zB-a79.text" = "Contacts";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "AVy-8L-LQt"; */
+"AVy-8L-LQt.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Delete Contact"; ObjectID = "AcM-gv-25p"; */
+"AcM-gv-25p.normalTitle" = "Delete Contact";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "AxA-Jl-TNg"; */
+"AxA-Jl-TNg.normalTitle" = "Logout";
+
+/* Class = "UILabel"; text = "You do not have any contact.\nClick top right button to add\nnew contact. "; ObjectID = "Bb3-mK-lGY"; */
+"Bb3-mK-lGY.text" = "You do not have any contact.\nClick top right button to add\nnew contact. ";
+
+/* Class = "UITextField"; placeholder = "Birthday"; ObjectID = "CGg-NU-PWw"; */
+"CGg-NU-PWw.placeholder" = "Birthday";
+
+/* Class = "UIButton"; normalTitle = "Do not have an account? Sign Up"; ObjectID = "FHC-BD-hRa"; */
+"FHC-BD-hRa.normalTitle" = "Do not have an account? Sign Up";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Fzo-KA-mxP"; */
+"Fzo-KA-mxP.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "notes"; ObjectID = "JaB-hZ-9sT"; */
+"JaB-hZ-9sT.text" = "notes";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "LgF-ak-rxB"; */
+"LgF-ak-rxB.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "Rhl-Tq-kaD"; */
+"Rhl-Tq-kaD.text" = "Notes";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "UKb-hO-ptr"; */
+"UKb-hO-ptr.normalTitle" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Delete Note"; ObjectID = "Wfp-s2-9Iu"; */
+"Wfp-s2-9Iu.normalTitle" = "Delete Note";
+
+/* Class = "UIButton"; normalTitle = "Already have an account? Sign In"; ObjectID = "WoB-id-P2e"; */
+"WoB-id-P2e.normalTitle" = "Already have an account? Sign In";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "Xqu-ph-JHe"; */
+"Xqu-ph-JHe.text" = "Sign In";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "ZL9-Qd-2la"; */
+"ZL9-Qd-2la.placeholder" = "Phone Number";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "aze-6Z-2Ii"; */
+"aze-6Z-2Ii.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dUz-zZ-rMq"; */
+"dUz-zZ-rMq.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Blood Group"; ObjectID = "fgX-FA-sqk"; */
+"fgX-FA-sqk.placeholder" = "Blood Group";
+
+/* Class = "UITextField"; placeholder = "Enter Note Title*"; ObjectID = "fgi-Tz-woS"; */
+"fgi-Tz-woS.placeholder" = "Enter Note Title*";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "h0P-Nr-IaO"; */
+"h0P-Nr-IaO.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "jV1-BA-5em"; */
+"jV1-BA-5em.normalTitle" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Add Photo"; ObjectID = "kJ7-zE-nxp"; */
+"kJ7-zE-nxp.normalTitle" = "Add Photo";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "kuu-wl-iWG"; */
+"kuu-wl-iWG.placeholder" = "E-mail";
+
+/* Class = "UILabel"; text = "You do not have any note.\nClick \"+\" button to add note. "; ObjectID = "lQT-iY-Gps"; */
+"lQT-iY-Gps.text" = "You do not have any note.\nClick \"+\" button to add note. ";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "mb2-QL-IvM"; */
+"mb2-QL-IvM.placeholder" = "E-mail";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "mrB-kC-rRd"; */
+"mrB-kC-rRd.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "qSn-pb-s6x"; */
+"qSn-pb-s6x.normalTitle" = "Sign In";
+
+/* Class = "UITabBarItem"; title = "Notes"; ObjectID = "qvc-Wn-E60"; */
+"qvc-Wn-E60.title" = "Notes";
+
+/* Class = "UITextField"; placeholder = "Surname"; ObjectID = "vJL-Qw-zOL"; */
+"vJL-Qw-zOL.placeholder" = "Surname";
+
+/* Class = "UITextField"; placeholder = "Phone*"; ObjectID = "xdk-UW-pZD"; */
+"xdk-UW-pZD.placeholder" = "Phone*";

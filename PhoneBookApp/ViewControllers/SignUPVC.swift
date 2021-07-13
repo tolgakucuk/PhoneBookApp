@@ -35,8 +35,40 @@ class SignUPVC: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         PhoneNumberText.delegate = self
         hideKeyboardWhenTappedAround()
+        if self.traitCollection.userInterfaceStyle == .dark {
+            PhoneNumberText.layer.borderColor = UIColor.white.cgColor
+            EmailText.layer.borderColor = UIColor.white.cgColor
+            PasswordText.layer.borderColor = UIColor.white.cgColor
+            ConfirmPasswordText.layer.borderColor = UIColor.white.cgColor
+        }
+        else{
+            PhoneNumberText.layer.borderColor = UIColor.black.cgColor
+            EmailText.layer.borderColor = UIColor.black.cgColor
+            PasswordText.layer.borderColor = UIColor.black.cgColor
+            ConfirmPasswordText.layer.borderColor = UIColor.black.cgColor
+        }
        
     }
+  
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if self.traitCollection.userInterfaceStyle == .dark {
+            PhoneNumberText.layer.borderColor = UIColor.white.cgColor
+            EmailText.layer.borderColor = UIColor.white.cgColor
+            PasswordText.layer.borderColor = UIColor.white.cgColor
+            ConfirmPasswordText.layer.borderColor = UIColor.white.cgColor
+        }
+        else{
+            PhoneNumberText.layer.borderColor = UIColor.black.cgColor
+            EmailText.layer.borderColor = UIColor.black.cgColor
+            PasswordText.layer.borderColor = UIColor.black.cgColor
+            ConfirmPasswordText.layer.borderColor = UIColor.black.cgColor
+        }
+       
+    }
+    
+    
+    
     
     //MARK: - Sign Up Clicked
     @IBAction func SignUpClicked(_ sender: Any) {

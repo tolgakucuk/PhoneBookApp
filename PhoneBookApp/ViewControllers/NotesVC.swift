@@ -25,6 +25,8 @@ class NotesVC: UIViewController {
         notesTableView.dataSource = self
         
         getNotes()
+        
+        
     }
     
     //MARK: - Plus Button Clicked

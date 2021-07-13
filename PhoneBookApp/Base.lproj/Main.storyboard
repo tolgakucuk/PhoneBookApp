@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bll-5k-gne">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bll-5k-gne">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,6 +53,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZL9-Qd-2la">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="lLM-Hh-2af"/>
                                         </constraints>
@@ -70,6 +71,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuu-wl-iWG">
                                         <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="9Zx-R1-rjc"/>
                                         </constraints>
@@ -87,6 +89,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-KA-mxP">
                                         <rect key="frame" x="0.0" y="108" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="aSV-Os-vUZ"/>
                                         </constraints>
@@ -104,6 +107,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aze-6Z-2Ii">
                                         <rect key="frame" x="0.0" y="162" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="y98-cc-bP4"/>
                                         </constraints>
@@ -252,6 +256,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-QL-IvM">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="oMj-88-n7q"/>
                                         </constraints>
@@ -269,6 +274,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-ak-rxB">
                                         <rect key="frame" x="0.0" y="65" width="384" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="fGq-PQ-bFB"/>
                                         </constraints>
@@ -412,13 +418,13 @@ Click "+" button to add note. </string>
                                 <rect key="frame" x="0.0" y="120" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="DWS-Nf-rGn">
-                                    <rect key="frame" x="0.0" y="117.5" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="110.50000034679067" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="KfW-9t-ecb" customClass="NotesCell" customModule="PhoneBookApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="61.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KfW-9t-ecb" id="lkL-zo-pW1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
@@ -433,7 +439,7 @@ Click "+" button to add note. </string>
                                                                 <constraint firstAttribute="height" constant="20.5" id="MIW-Rz-6Yc"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.5450980392" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="systemBlueColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-hZ-9sT">
@@ -606,10 +612,10 @@ Click "+" button to add note. </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-fN-rNn">
-                                <rect key="frame" x="0.0" y="173" width="414" height="689"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-mK-lGY">
-                                        <rect key="frame" x="32" y="169.5" width="350" height="350"/>
+                                        <rect key="frame" x="32" y="172" width="350" height="350"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="1eH-6Y-u3E"/>
                                             <constraint firstAttribute="width" constant="350" id="c7W-JS-yNu"/>
@@ -640,16 +646,16 @@ new contact. </string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-2L-ivm">
-                                <rect key="frame" x="0.0" y="173" width="414" height="689"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="ZWD-wI-ylv">
-                                    <rect key="frame" x="0.0" y="156" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="149.00000034679067" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="mJc-oz-SiU" customClass="ContactsViewCell" customModule="PhoneBookApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJc-oz-SiU" id="5xH-gI-Sa0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -685,12 +691,11 @@ new contact. </string>
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WeL-yY-tXm">
-                                <rect key="frame" x="0.0" y="117" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxA-Jl-TNg">
-                                <rect key="frame" x="343" y="32" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxA-Jl-TNg">
+                                <rect key="frame" x="345" y="-6" width="48" height="107"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutClicked:" destination="aty-S3-L3r" eventType="touchUpInside" id="1ET-o7-Ly5"/>
@@ -700,6 +705,7 @@ new contact. </string>
                         <viewLayoutGuide key="safeArea" id="p6Y-0G-d7a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="AxA-Jl-TNg" secondAttribute="trailing" constant="20" id="Dve-af-eev"/>
                             <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="wrO-fN-rNn" secondAttribute="trailing" id="G2b-jE-Ik3"/>
                             <constraint firstItem="9ys-zB-a79" firstAttribute="top" secondItem="p6Y-0G-d7a" secondAttribute="top" constant="20" id="Nf0-4R-J6w"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="top" secondItem="WeL-yY-tXm" secondAttribute="bottom" id="Scp-Aw-ULw"/>
@@ -711,9 +717,11 @@ new contact. </string>
                             <constraint firstItem="wrO-fN-rNn" firstAttribute="top" secondItem="WeL-yY-tXm" secondAttribute="bottom" id="ftw-Io-OX1"/>
                             <constraint firstItem="WeL-yY-tXm" firstAttribute="trailing" secondItem="p6Y-0G-d7a" secondAttribute="trailing" id="gBi-sp-Qxe"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="leading" secondItem="p6Y-0G-d7a" secondAttribute="leading" id="hbI-cz-fJc"/>
+                            <constraint firstItem="WeL-yY-tXm" firstAttribute="top" secondItem="AxA-Jl-TNg" secondAttribute="bottom" constant="10" id="oLn-ZY-28S"/>
                             <constraint firstItem="p6Y-0G-d7a" firstAttribute="trailing" secondItem="vN0-nV-yN0" secondAttribute="trailing" constant="20" id="oPE-1e-VpR"/>
                             <constraint firstItem="3cj-2L-ivm" firstAttribute="trailing" secondItem="p6Y-0G-d7a" secondAttribute="trailing" id="pKp-ck-6rb"/>
                             <constraint firstItem="WeL-yY-tXm" firstAttribute="top" secondItem="vN0-nV-yN0" secondAttribute="bottom" constant="10" id="qDM-dw-Roo"/>
+                            <constraint firstItem="AxA-Jl-TNg" firstAttribute="top" secondItem="0hh-xV-8Cz" secondAttribute="top" id="ure-DN-WlZ"/>
                             <constraint firstItem="vN0-nV-yN0" firstAttribute="centerY" secondItem="9ys-zB-a79" secondAttribute="centerY" id="wen-RR-Pzr"/>
                         </constraints>
                     </view>
@@ -904,7 +912,7 @@ new contact. </string>
     <inferredMetricsTieBreakers>
         <segue reference="T8f-Ko-FR6"/>
         <segue reference="h9I-zc-2Yd"/>
-        <segue reference="tXG-TC-YQd"/>
+        <segue reference="7dU-Vp-u7H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add2" width="800" height="566"/>

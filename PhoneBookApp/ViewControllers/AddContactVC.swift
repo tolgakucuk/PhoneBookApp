@@ -42,10 +42,10 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         //sil butonu ile ilgili işlemler
         if isNewContact {
             deleteButton.isHidden = true
-            saveButton.setTitle("Save", for: .normal)
+            saveButton.setTitle("SAVE".localized, for: .normal)
         } else {
             deleteButton.isHidden = false
-            saveButton.setTitle("Update", for: .normal)
+            saveButton.setTitle("UPDATE".localized, for: .normal)
             //bir önceki sayfadan aldığımı verileri ekrana basma
             if contact != nil {
                 image.sd_setImage(with: URL(string: contact!.contactUrl))
@@ -63,6 +63,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         bloodGroupText.inputView = pickerView
         phoneNumberText.delegate = self
         createDatePicker()
+        
         
         
     }

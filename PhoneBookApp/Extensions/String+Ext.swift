@@ -19,4 +19,8 @@ extension String {
         }
         return pureNumber
     }
+    
+    var localized: String {
+            return NSLocalizedString(self, comment: "")
+        }
 }

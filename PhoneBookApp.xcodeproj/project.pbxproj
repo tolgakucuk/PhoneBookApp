@@ -12,6 +12,7 @@
 		FACD1D1C266EB27900E41876 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD1D1B266EB27900E41876 /* NotesCell.swift */; };
 		FD39FE322678AB2E00A16955 /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39FE312678AB2E00A16955 /* AddNoteVC.swift */; };
 		FD39FE352678AC8300A16955 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39FE342678AC8300A16955 /* Notes.swift */; };
+		FD4F00D2269DA73C00B85AB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD4F00D4269DA73C00B85AB0 /* Localizable.strings */; };
 		FD701FE72679E9BA00E5D7E2 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701FE62679E9BA00E5D7E2 /* String+Ext.swift */; };
 		FD855E6F266D440400FC4DEB /* ContactsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */; };
 		FD855E73266D716200FC4DEB /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD855E72266D716200FC4DEB /* Contacts.swift */; };
@@ -38,6 +39,11 @@
 		FACD1D1B266EB27900E41876 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		FD39FE312678AB2E00A16955 /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
 		FD39FE342678AC8300A16955 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		FD4F00CC269D943400B85AB0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		FD4F00CD269D943400B85AB0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FD4F00CF269D947600B85AB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		FD4F00D3269DA73C00B85AB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD4F00D5269DA73F00B85AB0 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD701FE62679E9BA00E5D7E2 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		FD855E6E266D440400FC4DEB /* ContactsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewCell.swift; sourceTree = "<group>"; };
 		FD855E72266D716200FC4DEB /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		FDC2DD54266B9968002F1FA3 = {
 			isa = PBXGroup;
 			children = (
+				FD4F00D4269DA73C00B85AB0 /* Localizable.strings */,
 				FDC2DD5F266B9968002F1FA3 /* PhoneBookApp */,
 				FDC2DD5E266B9968002F1FA3 /* Products */,
 				D2718AEA73C055EC00E1AE64 /* Pods */,
@@ -208,6 +215,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = FDC2DD54266B9968002F1FA3;
 			productRefGroup = FDC2DD5E266B9968002F1FA3 /* Products */;
@@ -224,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4F00D2269DA73C00B85AB0 /* Localizable.strings in Resources */,
 				FDC2DD6D266B9969002F1FA3 /* LaunchScreen.storyboard in Resources */,
 				FDC2DD7C266BCE31002F1FA3 /* GoogleService-Info.plist in Resources */,
 				FDC2DD6A266B9969002F1FA3 /* Assets.xcassets in Resources */,
@@ -302,10 +311,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FD4F00D4269DA73C00B85AB0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD4F00D3269DA73C00B85AB0 /* en */,
+				FD4F00D5269DA73F00B85AB0 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FDC2DD66266B9968002F1FA3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FDC2DD67266B9968002F1FA3 /* Base */,
+				FD4F00CC269D943400B85AB0 /* tr */,
+				FD4F00CF269D947600B85AB0 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -314,6 +334,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDC2DD6C266B9969002F1FA3 /* Base */,
+				FD4F00CD269D943400B85AB0 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -325,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -386,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -443,16 +466,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CB2FL454D9;
+				DEVELOPMENT_TEAM = YDLS558923;
 				INFOPLIST_FILE = PhoneBookApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tolgakucuk.PhoneBookApp;
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = co.werk.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,16 +490,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CB2FL454D9;
+				DEVELOPMENT_TEAM = YDLS558923;
 				INFOPLIST_FILE = PhoneBookApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tolgakucuk.PhoneBookApp;
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = co.werk.PhoneBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
